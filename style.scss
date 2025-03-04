@@ -39,19 +39,15 @@ $text-light-dark: #202020;
 
 body {
   font-family: "Nunito", sans-serif;
-  overflow: hidden;
-  height: 100vh;
-  &.loaded {
-    overflow: auto;
-    height: auto;
+  @media screen and (min-width: 992px) {
+    overflow: hidden;
+    height: 100vh;
+    &.loaded {
+      overflow: auto;
+      height: auto;
+    }
   }
 }
-
-// main {
-//   @media screen and (min-width:992px) {
-//     transform: translateY(300px);
-//   }
-// }
 
 a {
   text-decoration: none;
@@ -516,6 +512,7 @@ a {
   height: 100%;
   background-color: #000000;
   z-index: 11111;
+  pointer-events: none;
 
   p {
     font-size: 40px;
@@ -523,5 +520,14 @@ a {
     transform: translateY(30px);
     opacity: 0;
     color: #ffffff;
+    will-change: opacity, filter;
+  }
+}
+
+body {
+  &.loaded {
+    .loader {
+      z-index: 0;
+    }
   }
 }

@@ -79,34 +79,32 @@ document.addEventListener("DOMContentLoaded", () => {
       tl.to(loaderTitle, {
         opacity: 1,
         y: 0,
-        duration: 0.8,
-        delay: 0.2,
+        duration: 1.2,
+        delay: 0.3,
+        filter:"blur(0px)"
+
       });
+
 
       tl.to(
         loader,
         {
-          duration: 1.4,
-          y: "-100%",
-          clipPath: "inset(0% 0% 100% 0%)",
-          ease: "expo.in",
+          duration: 1.2,
+          opacity:0,
+          delay:.6,
+        //   ease: "expo.in",
           onComplete: () => {
             document.body.classList.add("loaded");
           },
         },
         ">"
       );
+      tl.to(loaderTitle, {
+        opacity: 0,
+        y: -20,
+        duration: 1,
+      },"<-=.2");
 
-    //   tl.to(
-    //     main,
-    //     {
-    //       duration: 1.2,
-    //       y: 0,
-    //       ease: "expo.in",
-
-    //     },
-    //     "<+=.1"
-    //   );
     });
   };
 
