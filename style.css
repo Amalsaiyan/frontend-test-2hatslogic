@@ -318,6 +318,10 @@ a {
   position: relative;
   padding-left: 14px;
   padding-block: 7px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .footer .count-wrap {
