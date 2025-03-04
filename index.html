@@ -16,6 +16,9 @@
 
     <!-- fonts  -->
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
     <!-- bootstrap  -->
 
     <link
@@ -30,7 +33,7 @@
 
   <body>
     <main class="d-flex">
-      <section class="left-content position-relative">
+      <section class="left-content position-relative d-flex flex-column">
         <header class="header">
           <div class="container">
             <nav class="d-flex">
@@ -44,12 +47,16 @@
                 <p class="mb-0">Hello World!</p>
               </a>
               <div
-                class="main-nav d-flex align-items-center flex-grow-1 justify-content-between"
+                class="main-nav d-none d-xl-flex align-items-center flex-grow-1 justify-content-between"
               >
                 <a href="#" class="main-nav-links">Course</a>
                 <a href="#" class="main-nav-links">Info</a>
                 <a href="#" class="main-nav-links">Testimonial</a>
                 <a href="#" class="main-nav-links">Categories</a>
+              </div>
+              <div class="mob-ham-button mob-button d-xl-none">
+                <span></span>
+                <span></span>
               </div>
             </nav>
           </div>
@@ -57,7 +64,9 @@
         <section class="home-banner">
           <div class="container">
             <div class="course">
-              <h1 class="course-ttl">LEARN GRAPHICS DESIGN FOR LIFE</h1>
+              <h1 class="course-ttl mb-3 mb-lg-0">
+                LEARN GRAPHICS DESIGN FOR LIFE
+              </h1>
               <p class="mb-0">
                 Stay Informed, Stay Ahead: Unveiling the Future of Technology,
                 Gadgets, and Innovation
@@ -66,7 +75,7 @@
                 Your Gateway to the Digital Universe - Where Innovation Meets
                 Insight
               </p>
-              <div class="course-icon">
+              <div class="course-icon d-none d-lg-flex">
                 <svg
                   width="34"
                   height="34"
@@ -84,7 +93,7 @@
             <div class="course-status d-flex">
               <div>
                 <span class="count">5.1 K</span>
-                <p class="count-disc pb-0">Students All Over World</p>
+                <p class="count-disc mb-0">Students All Over World</p>
               </div>
               <div class="d-flex position-relative frame-wrap">
                 <div class="frame">
@@ -98,8 +107,8 @@
                 </div>
               </div>
             </div>
-            <div class="course-book d-flex">
-              <button class="btn-primary">Book Your Seat</button>
+            <div class="course-book d-flex flex-column flex-md-row">
+              <button class="btn-primary mb-3 mb-md-0">Book Your Seat</button>
               <button class="play d-flex align-items-center">
                 <div class="image">
                   <img src="./assets/icons/icon-play.svg" alt="" />
@@ -109,9 +118,188 @@
             </div>
           </div>
         </section>
+        <!-- mob swiper  -->
+        <section class="testimonial-mob position-relative d-block d-xl-none">
+          <div class="swiper testimonialSwiperMob">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb1.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb3.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb5.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb2.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb4.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb6.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb1.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb3.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb5.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb2.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb4.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb6.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb1.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb3.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb5.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb2.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb4.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb6.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb1.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb3.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb5.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb2.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb4.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image position-relative">
+                  <figure class="ratio mb-0">
+                    <img src="./assets/images/thumb6.png" alt="" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- mob swiper  -->
+
         <footer class="footer">
           <div class="container">
-            <div class="row row-cols-md-auto justify-content-between">
+            <div
+              class="row row-cols-3 row-cols-lg-auto justify-content-md-between"
+            >
               <div>
                 <div class="count-wrap">
                   <span class="count">6409</span>
@@ -134,7 +322,7 @@
           </div>
         </footer>
       </section>
-      <section class="testimonial position-relative">
+      <section class="testimonial position-relative d-none d-xl-block">
         <div class="swiper-wrapper-main d-flex">
           <div class="swiper testimonialSwiper1">
             <div class="swiper-wrapper">
