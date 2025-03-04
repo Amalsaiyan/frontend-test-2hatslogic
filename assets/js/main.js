@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let testimonialHeight = document
     .querySelector("main")
     .getBoundingClientRect().height;
-  console.log(testimonialHeight);
 
   if (testimonialHeight) {
     document.documentElement.style.setProperty(
@@ -46,12 +45,22 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 0,
     },
     breakpoints: {
-        768: {
-          slidesPerView: 5,
-        }
+      768: {
+        slidesPerView: 5,
       },
+    },
     loop: true,
     allowTouchMove: false,
     disableOnInteraction: true,
+  });
+
+  const header = document.querySelector(".header");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 30) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
   });
 });
