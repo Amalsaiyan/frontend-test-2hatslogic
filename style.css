@@ -132,6 +132,7 @@ a {
   padding: 8px 0 8px 8px;
   margin-left: auto;
   align-self: center;
+  border: 0;
 }
 .header .mob-ham-button span {
   display: block;

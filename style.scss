@@ -135,6 +135,7 @@ a {
     padding: 8px 0 8px 8px;
     margin-left: auto;
     align-self: center;
+    border: 0;
     span {
       display: block;
       width: 100%;
@@ -313,7 +314,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
     @media screen and (min-width: 768px) {
       padding-left: 1.5625rem;
     }
