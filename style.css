@@ -51,12 +51,32 @@ a {
   color: #ffffff;
   border: 0;
   border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.btn-primary span {
+  will-change: transform;
+  transition: all 1.125s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn-primary span.bottom {
+  position: absolute;
+  transform: translateY(8%);
+  left: 0;
+  opacity: 0;
 }
 @media screen and (min-width: 992px) {
   .btn-primary {
     padding: 1.5rem 4.5625rem;
     font-size: var(--text-md);
   }
+  .btn-primary:hover {
+    background-color: #243c36;
+  }
+}
+.btn-primary:active, .btn-primary:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #243c36;
 }
 
 .header {
@@ -118,6 +138,12 @@ a {
   line-height: 1;
   padding: 10px;
   letter-spacing: 0.03rem;
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 992px) {
+  .header .main-nav-links:hover {
+    color: #000;
+  }
 }
 .header .mob-ham-button {
   margin: 0;
@@ -283,6 +309,7 @@ a {
 .home-banner .course-book .play p {
   font-weight: 500;
   font-size: 18px;
+  transition: all 0.3s ease;
 }
 @media screen and (min-width: 992px) {
   .home-banner .course-book .play p {
@@ -303,6 +330,9 @@ a {
     width: 69px;
     height: 69px;
   }
+}
+.home-banner .course-book .play:hover p {
+  letter-spacing: 0.04rem;
 }
 
 .footer {

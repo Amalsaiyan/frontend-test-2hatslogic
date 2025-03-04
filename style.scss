@@ -54,9 +54,31 @@ a {
   color: #ffffff;
   border: 0;
   border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+
+  span {
+    will-change: transform;
+    transition: all 1.125s cubic-bezier(0.19, 1, 0.22, 1);
+    &.bottom {
+      position: absolute;
+      transform: translateY(8%);
+      left: 0;
+      opacity: 0;
+    }
+  }
   @media screen and (min-width: 992px) {
     padding: 1.5rem 4.5625rem;
     font-size: var(--text-md);
+    &:hover {
+      background-color: #243c36;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #243c36;
   }
 }
 
@@ -119,6 +141,12 @@ a {
       line-height: 1;
       padding: 10px;
       letter-spacing: 0.03rem;
+      transition: all 0.3s ease;
+      &:hover {
+        @media screen and (min-width: 992px) {
+          color: #000;
+        }
+      }
     }
   }
 
@@ -274,6 +302,7 @@ a {
       p {
         font-weight: 500;
         font-size: 18px;
+        transition: all 0.3s ease;
         @media screen and (min-width: 992px) {
           font-size: var(--text-md);
         }
@@ -289,6 +318,11 @@ a {
         @media screen and (min-width: 992px) {
           width: 69px;
           height: 69px;
+        }
+      }
+      &:hover {
+        p {
+          letter-spacing: 0.04rem;
         }
       }
     }
