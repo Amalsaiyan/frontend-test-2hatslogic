@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 30) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
   let testimonialHeight = document
     .querySelector("main")
     .getBoundingClientRect().height;
@@ -54,14 +64,55 @@ document.addEventListener("DOMContentLoaded", () => {
     disableOnInteraction: true,
   });
 
-  const header = document.querySelector(".header");
+  const loader = document.querySelector(".loader");
+  const loaderTitle = document.querySelector(".loader-ttl");
+  const main = document.querySelector("main");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 30) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
+  let bannerCtx;
+
+  const BannerAnimation = () => {
+    bannerCtx && bannerCtx.revert();
+
+    bannerCtx = gsap.context(() => {
+      const tl = gsap.timeline();
+
+      tl.to(loaderTitle, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: 0.2,
+      });
+
+      tl.to(
+        loader,
+        {
+          duration: 1.4,
+          y: "-100%",
+          clipPath: "inset(0% 0% 100% 0%)",
+          ease: "expo.in",
+          onComplete: () => {
+            document.body.classList.add("loaded");
+          },
+        },
+        ">"
+      );
+
+    //   tl.to(
+    //     main,
+    //     {
+    //       duration: 1.2,
+    //       y: 0,
+    //       ease: "expo.in",
+
+    //     },
+    //     "<+=.1"
+    //   );
+    });
+  };
+
+  BannerAnimation();
+
+  window.addEventListener("resize", () => {
+    BannerAnimation();
   });
-  
 });

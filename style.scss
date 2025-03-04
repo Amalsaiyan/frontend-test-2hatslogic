@@ -41,7 +41,17 @@ body {
   font-family: "Nunito", sans-serif;
   overflow: hidden;
   height: 100vh;
+  &.loaded {
+    overflow: auto;
+    height: auto;
+  }
 }
+
+// main {
+//   @media screen and (min-width:992px) {
+//     transform: translateY(300px);
+//   }
+// }
 
 a {
   text-decoration: none;
@@ -499,11 +509,19 @@ a {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #000000;
   z-index: 11111;
+
+  p {
+    font-size: 40px;
+    line-height: 1;
+    transform: translateY(30px);
+    opacity: 0;
+    color: #ffffff;
+  }
 }
