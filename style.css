@@ -37,7 +37,7 @@
 body {
   font-family: "Nunito", sans-serif;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   body {
     overflow: hidden;
     height: 100vh;
@@ -520,6 +520,19 @@ a {
 
 body.loaded .loader {
   z-index: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .fade-up,
+  .testimonial-fade {
+    opacity: 0;
+    transform: translateY(25px);
+    will-change: transform, opacity;
+  }
+  .testimonial-fade {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -67,7 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector(".loader");
   const loaderTitle = document.querySelector(".loader-ttl");
   const main = document.querySelector("main");
-
+  const fade = document.querySelectorAll(".fade-up");
+  const testimonialFade = document.querySelector(".testimonial-fade");
   let bannerCtx;
 
   const BannerAnimation = () => {
@@ -81,34 +82,55 @@ document.addEventListener("DOMContentLoaded", () => {
         y: 0,
         duration: 1.2,
         delay: 0.3,
-        filter:"blur(0px)"
-
+        filter: "blur(0px)",
       });
-
 
       tl.to(
         loader,
         {
           duration: 1.2,
-          opacity:0,
-          delay:.6,
-        //   ease: "expo.in",
+          opacity: 0,
+          delay: 0.6,
+          //   ease: "expo.in",
           onComplete: () => {
             document.body.classList.add("loaded");
           },
         },
         ">"
       );
-      tl.to(loaderTitle, {
-        opacity: 0,
-        y: -20,
-        duration: 1,
-      },"<-=.2");
-
+      tl.to(
+        loaderTitle,
+        {
+          opacity: 0,
+          y: -25,
+          duration: .8,
+        },
+        "<-=.2"
+      );
+      tl.to(
+        fade,
+        {
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.8,
+          y: 0,
+        },
+        "<+=.3"
+      );
+      tl.to(
+        testimonialFade,
+        {
+          opacity: 1,
+          duration: 0.8,
+        },
+        "<"
+      );
     });
   };
 
-  BannerAnimation();
+  if (window.innerWidth >= 1200) {
+    BannerAnimation();
+  }
 
   window.addEventListener("resize", () => {
     BannerAnimation();

@@ -39,7 +39,7 @@ $text-light-dark: #202020;
 
 body {
   font-family: "Nunito", sans-serif;
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     overflow: hidden;
     height: 100vh;
     &.loaded {
@@ -529,5 +529,19 @@ body {
     .loader {
       z-index: 0;
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .fade-up,
+  .testimonial-fade {
+    opacity: 0;
+    transform: translateY(25px);
+    will-change: transform, opacity;
+  }
+
+  .testimonial-fade {
+    opacity: 0;
+    will-change: transform, opacity;
   }
 }
